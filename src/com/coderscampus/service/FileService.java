@@ -18,6 +18,7 @@ public class FileService {
 			bufferedReader.readLine();
 	        String line;
 	        while ((line = bufferedReader.readLine()) != null) {
+	        	System.out.println("Reading line: "+ line);
 	            Optional<SuspectLocation> suspectLocationOpt = parseLine(line);
 	            suspectLocationOpt.ifPresent(suspectLocations::add);
 	        }
@@ -37,7 +38,7 @@ public class FileService {
 	    if (values.length >= 2) {
 	        String city = values[0].trim();
 	        String name = values[1].trim();
-	        return Optional.of(new SuspectLocation(city, name));
+	        return Optional.of(new SuspectLocation(name, city));
 	    }
 	    return Optional.empty();
 	}
