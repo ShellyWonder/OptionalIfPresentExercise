@@ -2,7 +2,7 @@ package com.coderscampus.domain;
 
 public class SuspectLocation {
 private String name;
-private String country;
+private String city;
 
 public String getName() {
 	return name;
@@ -12,18 +12,19 @@ public void setName(String name) {
 	this.name = name;
 }
 
-public String getCountry() {
-	return country;
+public String getCity() {
+	return city;
 }
 
-public void setCountry(String country) {
-	this.country = country;
+public void setCity(String city) {
+	this.city = city;
 }
 
-public SuspectLocation(String name, String country) {
+public SuspectLocation(String name, String city) {
 	super();
 	this.name = name;
-	this.country = country;
+	this.city = city;
+			
 }
 
 }
